@@ -1,14 +1,12 @@
 package com.qa.objects.pets;
 
-import java.util.ArrayList;
-
 public class Runner {
 
 	public static void main(String[] args) {
 		Dog d1 = new Dog("Rex", "Corgie", 6, "Brown", true);
 		Cat c1 = new Cat("Tiddles", "Siamese", 6, "Pink");
 
-		ArrayList<Pet> pets = new ArrayList<>();
+		java.util.ArrayList<Pet> pets = new java.util.ArrayList<>();
 
 		pets.add(d1);
 		pets.add(c1);
@@ -25,6 +23,10 @@ public class Runner {
 		// basically this:
 		Pet p1 = new Dog("Rex", "Corgie", 6, "Brown", true);
 		Pet p2 = new Cat("Tiddles", "Siamese", 6, "Pink");
+
+		System.out.println(p1.getClass().getSimpleName());
+		System.out.println(p2.getClass().getSimpleName());
+
 	}
 
 }
