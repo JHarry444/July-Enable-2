@@ -1,23 +1,24 @@
-package com.qa.objects;
+package com.qa.objects.pets;
 
-public class Dog {
+public class Pet extends Object {
 
-	// instance variables
-	private String name = "Woofy";
+	private String name;
 	private String breed;
 	private int age;
 	private String colour;
 
-	public Dog() {
+	public Pet() {
+		super();
 	}
 
-	public Dog(String name, String breed) {
+	public Pet(String name, String breed) {
 		super();
 		this.name = name;
 		this.breed = breed;
 	}
 
-	public Dog(String name, String breed, int age, String colour) {
+	public Pet(String name, String breed, int age, String colour) {
+		super();
 		this.name = name;
 		this.breed = breed;
 		this.age = age;
@@ -28,6 +29,10 @@ public class Dog {
 		System.out.println("Hello! My name is " + name);
 		System.out.println("I am " + this.age + " years old!");
 		System.out.println("And I am a " + colour + " " + breed);
+	}
+
+	public void makeNoise() {
+		System.out.println("...hello?");
 	}
 
 	public void setAge(int age) {
