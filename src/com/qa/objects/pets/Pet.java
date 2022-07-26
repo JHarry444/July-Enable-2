@@ -1,6 +1,6 @@
 package com.qa.objects.pets;
 
-public class Pet extends Object {
+public abstract class Pet extends Object {
 
 	private String name;
 	private String breed;
@@ -31,9 +31,7 @@ public class Pet extends Object {
 		System.out.println("And I am a " + colour + " " + breed);
 	}
 
-	public void makeNoise() {
-		System.out.println("...hello?");
-	}
+	public abstract void makeNoise();
 
 	public void setAge(int age) {
 		if (age > 0 && age < 20)

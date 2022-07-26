@@ -1,5 +1,7 @@
 package com.qa.objects;
 
+import com.qa.objects.pets.Dog;
+
 public class Runner {
 
 	public static void main(String[] args) {
