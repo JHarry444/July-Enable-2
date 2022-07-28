@@ -4,21 +4,21 @@ import java.util.ArrayList;
 
 public class PersonManager {
 
-	ArrayList<Person> people = new ArrayList<>();
+	private ArrayList<Person> people = new ArrayList<>();
 
-	void addPerson(Person p) {
+	public void addPerson(Person p) {
 		this.people.add(p);
 	}
 
-	Person findPerson(String name) {
+	public Person findPerson(String name) throws PersonNotFoundException {
 		for (Person p : this.people) {
-			if (p.name.equalsIgnoreCase(name))
+			if (p.getName().equalsIgnoreCase(name))
 				return p;
 		}
-		return null;
+		throw new PersonNotFoundException("Person not found with name " + name);
 	}
 
-	void printAll() {
+	public void printAll() {
 		for (Person p : this.people)
 			p.print();
 	}

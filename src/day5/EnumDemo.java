@@ -1,16 +1,18 @@
 package day5;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class EnumDemo {
 
 	public static void main(String[] args) {
 		LocalDate date = LocalDate.of(1994, 4, 4);
-		System.out.println(call(CoinFlip.HEADS));
-		System.out.println(call(CoinFlip.HEADS));
-		System.out.println(call(CoinFlip.HEADS));
-		System.out.println(call(CoinFlip.HEADS));
-		System.out.println(call(CoinFlip.HEADS));
+
+		ArrayList<Boolean> results = new ArrayList<>();
+
+		for (int i = 0; i < 1_000; i++) {
+			results.add(call(CoinFlip.HEADS));
+		}
 
 	}
 

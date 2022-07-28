@@ -10,7 +10,6 @@ public class Runner {
 		System.out.println(play(RPS.ROCK));
 		System.out.println(play(RPS.ROCK));
 		System.out.println(play(RPS.ROCK));
-
 	}
 
 	public static Result play(RPS playerChoice) {
