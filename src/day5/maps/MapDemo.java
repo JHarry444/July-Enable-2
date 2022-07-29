@@ -30,6 +30,9 @@ public class MapDemo {
 		reversePeople.put(new Person("Ed", 25, "Trainer"), 300);
 		reversePeople.put(new Person("Ed", 25, "Trainer"), 265);
 		System.out.println("Reversed: " + reversePeople);
+
+		people.entrySet().forEach(entry -> System.out.println(entry));
+		people.entrySet().forEach(System.out::println);
 	}
 
 }

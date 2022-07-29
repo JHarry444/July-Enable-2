@@ -1,7 +1,8 @@
 package com.qa.objects.person;
 
-public class Person {
+public class Person implements Comparable<Person> {
 
+	public static String latinName;
 	private String name;
 	private int age;
 	private String jobTitle;
@@ -72,6 +73,16 @@ public class Person {
 		} else if (!this.name.equals(other.name))
 			return false;
 		return true;
+	}
+
+	@Override
+	public int compareTo(Person other) {
+		if (this.age > other.age)
+			return -1;
+		else if (this.age == other.age)
+			return 0;
+		else
+			return +1;
 	}
 
 	@Override
